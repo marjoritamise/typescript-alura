@@ -1,18 +1,13 @@
 abstract class View<T> {
+  protected _elemento: JQuery;
 
-    protected _elemento: Element;
+  constructor(seletor: string) {
+    this._elemento = $(seletor);
+  }
 
-    constructor(seletor: string) {
+  update(model: T) {
+    this._elemento.html(this.template(model));
+  }
 
-        this._elemento = document.querySelector(seletor);
-    }
-
-    update(model: T) {
-
-        this._elemento.innerHTML = this.template(model);
-    }
-
-    abstract template(model: T): string;
-
+  abstract template(model: T): string;
 }
-
