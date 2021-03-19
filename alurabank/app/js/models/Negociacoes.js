@@ -1,11 +1,11 @@
 class Negociacoes {
     constructor() {
-        this._negociagoes = [];
+        this._negociacoes = [];
     }
     adiciona(negociacao) {
-        this._negociagoes.push(negociacao);
+        this._negociacoes.push(negociacao);
     }
     paraArray() {
-        return [].concat(this._negociagoes);
+        return [].concat(this._negociacoes);
     }
 }
